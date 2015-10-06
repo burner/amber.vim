@@ -4,11 +4,12 @@ endif
 
 syn keyword amberKeyword <{{ }}> < >
 syn match amberComment "//.*$"
-syn match amberAttribute "[a-zA-Z-_0-9=,;.:]*="
-syn match amberClass "\.[a-zA-Z-_0-9=,;.:]*"
-syn match amberId "\#[a-zA-Z-_0-9=,;.:]*"
+syn match amberAttribute "[a-zA-Z-_0-9=,;\.:]*="
+syn match amberClass "\.[a-zA-Z-_0-9=,;\.:]*"
+syn match amberClass "\.\"[^\"]*\""
+syn match amberId "\#[a-zA-Z-_0-9=,;\.:]*"
 syn keyword amberHtml h1 h2 h3 html body head div ul li a link meta script span icon img button title
-syn match amberAttributeValue "\\\"[a-zA-Z-_/\. 0-9=,;.:]*\\\""
+syn match amberAttributeValue "\\\"[a-zA-Z-_/\. 0-9=,;:]*\\\""
 
 highlight link amberKeyword Keyword
 highlight link amberHtml Keyword
